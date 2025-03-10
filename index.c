@@ -18,9 +18,11 @@ char Strlen(char string[]){
 
 int main() {
     char string[] = "a";
-    printf("Contador de letras!\nDigite sua string:\n");
-    scanf("%s", string);
-    //int verif = Strlen(string);
-    printf("Sua string possui: %i caracteres.", Strlen(string));
+    printf("==Contador de letras==\n");
+    do{
+        printf("Digite sua string (Ou apenas ENTER para sair):\n");
+        scanf("%s", string);
+        printf("Sua string possui: %i caracteres.\n", Strlen(string));
+    }while(Strlen(string) != 0);
     return 0;
 }
