@@ -2,27 +2,22 @@
 //#include <math.h>
 //#include <ctype.h>
 
-//Ideia é fazer um index que incrementa a cada verificação do loop enquanto ele não encontrar o \0
-
-char Strlen(char string[]){
-    int index = 1;
-    for(int i = 0; i < index; i++){
-        if(string[i] != '\0'){
-            index++;
-        }else{
-            break;
-        }
+int Strlen(char string[]){
+    int index = 0;
+    while(string[index] != '\0'){
+        index++;
     }
-    return index -1;
+    return index;
 }
 
 int main() {
     char string[] = "a";
-    printf("==Contador de letras==\n");
+    printf("==Contador de letras==\n(1 caracter para sair)\n");
     do{
-        printf("Digite sua string (Ou apenas ENTER para sair):\n");
-        scanf("%s", string);
+        printf("Digite sua string:\n");
+        scanf("%[^\n]", string);
+        getchar();
         printf("Sua string possui: %i caracteres.\n", Strlen(string));
-    }while(Strlen(string) != 0);
+    }while(Strlen(string) != 1);
     return 0;
 }
