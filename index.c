@@ -11,10 +11,10 @@ int Strlen(char string[]){
 }
 
 int main() {
-    char string[] = "a";
-    printf("==Contador de letras==\n(1 caracter para sair)\n");
+    char string[] = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    printf("==Contador de letras==\nInsira 1 caracter para sair.\n");
     do{
-        printf("Digite sua string:\n");
+        printf("Digite sua string:");
         scanf("%[^\n]", string);
         getchar();
         printf("Sua string possui: %i caracteres.\n", Strlen(string));
